@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html, body{
+  margin: 0;
+  height: 100%;
+}
+
+.type {
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#984D0F 5px,#0000 0) 10px 0,
+    linear-gradient(#984D0F 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+   blink-caret .7s infinite steps(1),   
+   typing calc(var(--n)*.3s) steps(var(--n)) forwards;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  font-size:small;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%; 
+}
+
+
+h4 {
+  text-align: left;
+  margin-left: 40px;
+}
+
+hr {
+  border-top: 2px dotted #3f51b5;
+}
+
+button {
+  margin-right: 10px;
+  font-size: 25px;
+  background: #3f51b5;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px #ccc;
+}
+/* For pdf */
+.react-pdf__Page {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /*Optional*/
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  display: none;
+  /*Optional*/
+}
+.react-pdf__Page__textContent {
+  border: 1px solid darkgrey;
+  box-shadow: 5px 5px 5px 1px #ccc;
+  border-radius: 5px;
+}
+
+  /*Optional*/
+.react-pdf__Page__annotations.annotationLayer {
+  padding: 20px;
+}
+/*Optional*/
+
+  /*Optional*/
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+}
+/*Optional*/
+
+/*Optional*/
+/* For all pages */
+.all-page-container {
+  height: 100%;
+  max-height: 500px;
+  overflow: auto;
+}
+/*Optional*/
+
+#drawArea {
+  width: 612px;
+  height: 792px;
+  border: 1px solid black;  
+  position: relative;
+  border:transparent;
+}
+
+.crosshair {
+  cursor: crosshair;
+}
+
+svg {
+  z-index: 1;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+.path {
+  fill: none;
+  stroke-width: 1px;
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.drawing {
+  width: 100%;
+  height: 100%;
+}
+textarea {
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.pdf-file{
+  display: none;
+}
+
+@keyframes typing{
+  from {background-size:0 200%}
+}
+@keyframes blink-caret {
+  50% {background-position:0 -100%,0 0}
+}
+
+:root{
+  --color-bg: #984D0F;
+}
