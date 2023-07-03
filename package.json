@@ -15,7 +15,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
-    "aws-sdk": "^2.1303.0",
+    "aws-sdk": "^2.1395.0",
     "axios": "^1.2.5",
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.5.1",
